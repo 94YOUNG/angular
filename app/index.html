@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/normalize.css">
     <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/main.css">
-    <link rel="stylesheet" href="lib/swiper4/swiper.css">
+    <link rel="stylesheet" href="lib/swiper/dist/css/swiper.css">
     <link rel="stylesheet" href="app.css">
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
@@ -28,57 +28,57 @@
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
 <![endif]-->
-<div ng-include="'common/nav.html'" onload="navLoad()"></div>
-<div ng-view></div>
-<div ng-view="nav"></div>
 
-<div ng-href="'common/footer.html'"></div>
+<div ng-view="nav"></div>
+<div ng-view></div>
+<div ng-view="footer"></div>
 <!-- In production use:
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
 -->
 <script src="lib/angular/angular.js"></script>
-<script src="lib/angular-route/angular-route.js"></script>
+<!--<script src="lib/angular-route/angular-route.js"></script>-->
+<script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="app.js"></script>
 <script src="view1/view1.js"></script>
 <script src="view2/view2.js"></script>
 <script src="core/version/version.js"></script>
 <script src="core/version/version-directive.js"></script>
 <script src="core/version/interpolate-filter.js"></script>
-<script src="lib/swiper4/swiper.js"></script>
+<script src="lib/swiper/dist/js/swiper.js"></script>
 <script>
 
-    function navLoad() {
-        var barwidth = 36 //导航粉色条的长度px
-        var tSpeed = 300 //切换速度300ms
-        console.log("9")
-         document.addEventListener('DOMContentLoaded',function () {
-             // debugger;
-             console.log('1')
-             var navSwiper = new Swiper('#nav', {
-                 slidesPerView: 6,
-                 freeMode: true,
-                 on: {
-                     init: function() {
-            /*             navSlideWidth = this.slides.eq(0).css('width'); //导航字数需要统一,每个导航宽度一致
-                         bar = this.$el.find('.bar')
-                         bar.css('width', navSlideWidth)
-                         bar.transition(tSpeed)
-                         navSum = this.slides[this.slides.length - 1].offsetLeft //最后一个slide的位置
-
-                         clientWidth = parseInt(this.$wrapperEl.css('width')) //Nav的可视宽度
-                         navWidth = 0
-                         for (i = 0; i < this.slides.length; i++) {
-                             navWidth += parseInt(this.slides.eq(i).css('width'))
-                         }
-
-                         topBar = this.$el.parents('body').find('#top') //页头*/
-
-                     },
-
-                 },
-             });
-         })
-    }
+    // function navLoad() {
+    //     var barwidth = 36 //导航粉色条的长度px
+    //     var tSpeed = 300 //切换速度300ms
+    //     console.log("9")
+    //      document.addEventListener('DOMContentLoaded',function () {
+    //          // debugger;
+    //          console.log('1')
+    //          var navSwiper = new Swiper('#nav', {
+    //              slidesPerView: 6,
+    //              freeMode: true,
+    //              on: {
+    //                  init: function() {
+    //         /*             navSlideWidth = this.slides.eq(0).css('width'); //导航字数需要统一,每个导航宽度一致
+    //                      bar = this.$el.find('.bar')
+    //                      bar.css('width', navSlideWidth)
+    //                      bar.transition(tSpeed)
+    //                      navSum = this.slides[this.slides.length - 1].offsetLeft //最后一个slide的位置
+    //
+    //                      clientWidth = parseInt(this.$wrapperEl.css('width')) //Nav的可视宽度
+    //                      navWidth = 0
+    //                      for (i = 0; i < this.slides.length; i++) {
+    //                          navWidth += parseInt(this.slides.eq(i).css('width'))
+    //                      }
+    //
+    //                      topBar = this.$el.parents('body').find('#top') //页头*/
+    //
+    //                  },
+    //
+    //              },
+    //          });
+    //      })
+    // }
 </script>
 </body>
 </html>
