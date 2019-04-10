@@ -29,9 +29,9 @@
     your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<div ng-view="nav"></div>
-<div ng-view></div>
-<div ng-view="footer"></div>
+<div ui-view="nav"></div>
+<div ui-view></div>
+<div ui-view="footer"></div>
 <!-- In production use:
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
 -->
@@ -46,39 +46,28 @@
 <script src="core/version/interpolate-filter.js"></script>
 <script src="lib/swiper/dist/js/swiper.js"></script>
 <script>
+    window.addEventListener('load', function () {
+        var navSwiper = new Swiper('#nav', {
+            slidesPerView: 6,
+            freeMode: true,
+            on: {
+                init: function () {
 
-    // function navLoad() {
-    //     var barwidth = 36 //导航粉色条的长度px
-    //     var tSpeed = 300 //切换速度300ms
-    //     console.log("9")
-    //      document.addEventListener('DOMContentLoaded',function () {
-    //          // debugger;
-    //          console.log('1')
-    //          var navSwiper = new Swiper('#nav', {
-    //              slidesPerView: 6,
-    //              freeMode: true,
-    //              on: {
-    //                  init: function() {
-    //         /*             navSlideWidth = this.slides.eq(0).css('width'); //导航字数需要统一,每个导航宽度一致
-    //                      bar = this.$el.find('.bar')
-    //                      bar.css('width', navSlideWidth)
-    //                      bar.transition(tSpeed)
-    //                      navSum = this.slides[this.slides.length - 1].offsetLeft //最后一个slide的位置
-    //
-    //                      clientWidth = parseInt(this.$wrapperEl.css('width')) //Nav的可视宽度
-    //                      navWidth = 0
-    //                      for (i = 0; i < this.slides.length; i++) {
-    //                          navWidth += parseInt(this.slides.eq(i).css('width'))
-    //                      }
-    //
-    //                      topBar = this.$el.parents('body').find('#top') //页头*/
-    //
-    //                  },
-    //
-    //              },
-    //          });
-    //      })
-    // }
+                },
+
+            },
+        });
+    })
+
 </script>
+<style>
+    html{
+        font-size: 14px;
+    }
+    li{
+        list-style: none;
+    }
+</style>
+
 </body>
 </html>

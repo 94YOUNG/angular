@@ -1,1 +1,62 @@
+<ul ng-controller="View1Ctrl" class="main-panel">
+    <li><span>{{bpiData.chartName}}</span></li>
+    <li>
+        <span ng-bind="bpiData.bpi.USD.rate_float-1"></span>
+<!--        <span></span>-->
+        <span class="fr" ng-bind="bpiData.bpi.USD.rate_float+1"></span>
+    </li>
+    <li>
+        <button>卖出</button>
+        <button class="fr">买入</button>
+    </li>
+</ul>
+<style lang="scss">
+    body {
+        background-color: #121212;
+    }
 
+    ul {
+        margin: 0;
+        padding: 0
+    }
+
+    .main-panel {
+        margin: 2vw 3vw;
+        background-color: #272727;
+        border-radius: 4vw;
+        padding: 3vw 5vw;
+    }
+
+    .main-panel li:first-of-type {
+        text-align: center;
+        width: 100%;
+        font-size: 1.2rem;
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+    .main-panel li:nth-of-type(2) span {
+        color: #ffffff;
+        font-size: 1.2rem;
+        width: 26vw;
+        text-align: center;
+        display: inline-block;
+        height: 9vw;
+        line-height: 9vw;
+    }
+    .main-panel li:nth-of-type(3) button {
+        font-size: 1.2rem;
+        color: #bb8b62;
+        border: 2px solid #bb8b62;
+        background-color: #121212;
+        border-radius: 6px;
+        width: 26vw;
+        height: 9vw;
+    }
+    .fl{
+        float: left;
+    }
+    .fr{
+        float: right;
+    }
+</style>

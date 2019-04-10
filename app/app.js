@@ -9,7 +9,7 @@ angular.module('myApp', [
 ]).config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
     $stateProvider.state('main', {
         url: '/main',
-        view: {
+        views: {
             '': {
                 templateUrl: 'view1/view1.html'
             },
@@ -17,9 +17,22 @@ angular.module('myApp', [
                 templateUrl: 'common/footer.html'
             },
             'nav': {
-                templateUrl: 'common/nav.html'
+                templateUrl: 'common/nav.html',
             }
         }
-    });
+    })
     $urlRouterProvider.otherwise('main');
+}]);
+
+/**
+ * 监听碎片页面加载，添加上面的标题
+ */
+angular.module('myApp').service('route',['$rootScope', function ($rootScope) {
+    /*监听路由改变*/
+    $rootScope.$on('$stateChangeSuccess', function (event, to, pargs, from) {
+        console.log(arguments);
+    });
+    $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
+        console.log(arguments);
+    });
 }])

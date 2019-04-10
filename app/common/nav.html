@@ -1,6 +1,12 @@
-<div>
-    <span>$0.00</span>
-    <img src="" alt="">
+<script>
+    console.log('23')
+/*    angular.module('myApp').controller('navCtrl',[function () {
+
+    }])*/
+</script>
+<div class="main-acc">
+    <span class="color_fff">$0.00</span>
+    <img src="common/img/down.png" alt="">
 </div>
 <div class="swiper-container" id="nav">
     <div class="swiper-wrapper">
@@ -15,20 +21,35 @@
     </div>
 </div>
 <style lang="scss">
+    .main-acc{
+        font-size: 1.2rem;
+        margin-left: 5vw;
+        height: 12vw;
+        line-height: 16vw;
+    }
+    .main-acc img{
+        width: 6vw;
+    }
+
     #nav .swiper-slide span {
         margin:0 5px;
         text-align:center;
         display:block;
         line-height:2.5;
-        font-size:14px;
-        color:#333333;
+        font-size:1.2rem;
+        color:#6c6c6c;
+    }
+    .swiper-container{
+        height: 13vw;
+        margin-left: 3vw;
     }
     .swiper-slide{
         width: 20vw;
     }
+    .color_fff{
+        color: #ffffff;
+    }
+    .active{
+        color:#bb8b62;
+    }
 </style>
-<script>
-    angular.module('myApp').controller('navCtrl',[function () {
-
-    }])
-</script>
