@@ -10,6 +10,18 @@
         <button class="fr">买入</button>
     </li>
 </ul>
+<ul ng-controller="View1Ctrl" class="main-panel">
+    <li><span>{{bpiData.chartName}}</span></li>
+    <li>
+        <span ng-bind="bpiData.bpi.USD.rate_float-1"></span>
+        <!--        <span></span>-->
+        <span class="fr" ng-bind="bpiData.bpi.USD.rate_float+1"></span>
+    </li>
+    <li>
+        <button>卖出</button>
+        <button class="fr">买入</button>
+    </li>
+</ul>
 <style lang="scss">
     body {
         background-color: #121212;
